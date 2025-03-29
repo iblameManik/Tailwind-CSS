@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <title>Education Website</title>
+</head>
+<body class="bg-slate-900">
+    <!-- Navbar -->
+    <nav class="w-full h-16 bg-gradient-to-r from-indigo-300 to-indigo-500 flex justify-between items-center px-6 shadow-lg">
+        <div class="text-3xl text-white font-extrabold">OtakuLearn</div>
+        
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex space-x-6 font-semibold text-white">
+            <li class="hover:text-yellow-300 transition duration-300 cursor-pointer">
+                <a href="#hardwork">Home</a>
+            </li>
+            <li class="hover:text-yellow-300 transition duration-300 cursor-pointer">
+                <a href="#our_products">About</a>
+            </li>
+            <li class="hover:text-yellow-300 transition duration-300 cursor-pointer">
+                <a href="#footer">Contact Us</a>
+            </li>
+        </ul>
+        
+        <!-- Login/SignUp Button -->
+        <a href="#login" class="hidden md:block px-4 py-2 bg-yellow-400 text-indigo-900 font-bold rounded-full shadow-md transition transform hover:scale-105 hover:bg-yellow-500">Login/SignUp</a>
+        
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+            <button id="menu-toggle" class="text-4xl text-white focus:outline-none">&#8801;</button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden bg-indigo-400 text-white text-center py-4 md:hidden">
+        <ul class="space-y-4">
+            <li class="hover:bg-indigo-500 hover:text-yellow-300 transition duration-300 cursor-pointer p-2 rounded">
+                <a href="#hardwork" class="block">Home</a>
+            </li>
+            <li class="hover:bg-indigo-500 hover:text-yellow-300 transition duration-300 cursor-pointer p-2 rounded">
+                <a href="#our_products" class="block">About Us</a>
+            </li>
+            <li class="hover:bg-indigo-500 hover:text-yellow-300 transition duration-300 cursor-pointer p-2 rounded">
+                <a href="#footer" class="block">Contact Us</a>
+            </li>
+            <li>
+                <a href="#login" class="mt-2 px-4 py-2 bg-yellow-400 text-indigo-900 font-bold rounded-full shadow-md transition transform hover:scale-105 hover:bg-yellow-500 inline-block">Login/SignUp</a>
+            </li>
+        </ul>
+    </div>
+    
+    <script>
+        document.getElementById("menu-toggle").addEventListener("click", function () {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    
+        // Close mobile menu when clicking a link
+        document.querySelectorAll("#mobile-menu a").forEach(link => {
+            link.addEventListener("click", () => {
+                document.getElementById("mobile-menu").classList.add("hidden");
+            });
+        });
+    
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                });
+            });
+        });
+    </script>
+    
+    
+    
+
+     <!-- Navbar End -->
+
+     <!-- Hero Section -->
+
+     <!-- Image Section Starts Here -->
+     <header class="w-full h-auto">
+        <img class="w-full hidden md:block" src="https://cdn.pwskills.com/assets/uploads/banners/63a18cca807628f5968f528a/web.jpg" alt="" srcset="">
+        <img class="w-full md:hidden" src="https://cdn.pwskills.com/assets/uploads/banners/63a18cca807628f5968f528a/mobile.jpg" alt="" srcset="">
+     </header>
+        <!-- Image Section Ends Here -->
+
+    <!-- Our Student Section -->
+
+    <div id="hardwork" class="h-auto w-100% flex flex-wrap flex-col items-center text-center p-10">
+        <div class="w-full h-auto flex flex-wrap flex-col items-center">
+            <p class="text-indigo-800 font-bold text-3xl  md:text-4xl text-center">"Pure Hardword, No Shortcuts!"</p>
+            <div class="w-36 h-1 border-b-4 border-yellow-400 mt-2 rounded-2xl md:mt-4 mb-12"></div>
+        </div>
+        <div class="w-full flex flex-wrap justify-evenly">
+            <div class="w-56 flex flex-col items-center mb-12">
+                <img class="w-44 h-44" src="https://cdn.kastatic.org/images/lohp/personalized_learning_icon.png" alt="Courses">
+                <p class="text-3xl font-bold text-white">600+</p>
+                <p class="text-2xl font-black text-gray-500 whitespace-nowrap">Different Courses</p>
+            </div>
+            <div class="w-56 flex flex-col items-center mb-12">
+                <img class="w-44 h-44" src="https://cdn.kastatic.org/images/lohp/trusted_content_icon.png" alt="Courses">
+                <p class="text-3xl font-bold text-white">700,000+</p>
+                <p class="text-2xl font-black text-gray-500 whitespace-nowrap">Students Enrolled</p>
+            </div>
+            <div class="w-56 flex flex-col items-center mb-12">
+                <img class="w-44 h-44" src="https://cdn.kastatic.org/images/lohp/empower_teachers_icon.png" alt="Courses">
+                <p class="text-3xl font-bold text-white">10,000+</p>
+                <p class="text-2xl font-black text-gray-500 whitespace-nowrap">Successful Transition</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Student Section Ends Here -->
+
+    <!-- Products Section Starts -->
+
+    <div id="our_products" class="h-auto w-100% flex flex-wrap flex-col items-center text-center p-10">
+        <div class="w-full h-auto flex flex-wrap flex-col items-center">
+            <p class="text-indigo-800 font-bold text-3xl  md:text-4xl text-center">Our Products</p>
+            <div class="w-36 h-1 border-b-4 border-yellow-400 mt-2 rounded-2xl md:mt-4 mb-12"></div>
+        </div>
+        <div class="w-[90%] h-auto flex gap-x-4 flex-wrap md:flex-nowrap justify-around gap-y-6">
+            <div class="w-64 flex flex-col items-center hover:border-white hover:border-2 rounded-xl p-4 shadow-lg hover:scale-105 transition-transform duration-300">
+                <img src="https://s3.ap-south-1.amazonaws.com/cdn.pwskills.com/assets/uploads/categoryIcon/bc14c559-783f-4f78-b7a7-7a638810c7da.svg" alt="Skills Lab">
+                <p class="text-3xl font-bold text-white mt-2">Skills Lab</p>
+                <p class="text-lg font-medium text-gray-300 text-center">Supercharge your project development with our robust lab.</p>
+            </div>
+            <div class="w-64 flex gap-x-4 flex-col items-center hover:border-white hover:border-2 rounded-xl p-4 shadow-lg hover:scale-105 transition-transform duration-300">
+                <img src="https://s3.ap-south-1.amazonaws.com/cdn.pwskills.com/assets/uploads/categoryIcon/7362227c-33fe-4113-955f-d616e8e87a04.svg" alt="Banking Lab">
+                <p class="text-3xl font-bold text-white mt-2">Banking & Finance</p>
+                <p class="text-lg font-medium text-gray-300 text-center">Up-skill yourself with relevant courses to become job ready in Banking.</p>
+            </div>
+            <div class="w-64 flex gap-x-4 flex-col items-center hover:border-white hover:border-2 rounded-xl p-4 shadow-lg hover:scale-105 transition-transform duration-300">
+                <img class="h-[72px] w-[72px]" src="https://s3.ap-south-1.amazonaws.com/cdn.pwskills.com/assets/uploads/categoryIcon/e6cac10c-85fd-4315-9def-48aa3094a3e9.svg" alt="Software">
+                <p class="text-3xl font-bold text-white mt-2">Software Development Courses</p>
+                <p class="text-lg font-medium text-gray-300 text-center">Upskill in-demand software & technology skills to attain desired jobs.</p>
+            </div>
+            <div class="w-64 flex gap-x-4 flex-col items-center hover:border-white hover:border-2 rounded-xl p-4 shadow-lg hover:scale-105 transition-transform duration-300">
+                <img class="h-[72px] w-[72px]" src="https://s3.ap-south-1.amazonaws.com/cdn.pwskills.com/assets/uploads/categoryIcon/8ea260a4-61a7-44de-940c-b242b2584872.svg" alt="Programming Courses">
+                <p class="text-3xl font-bold text-white mt-2">Programming Courses</p>
+                <p class="text-lg font-medium text-gray-300 text-center">Build strong coding foundation for a high-tech paying career.</p>
+            </div>
+            <div class="w-64 flex gap-x-4 flex-col items-center hover:border-white hover:border-2 rounded-xl p-4 shadow-lg hover:scale-105 transition-transform duration-300">
+                <img class="h-[72px] w-[72px]" src="https://s3.ap-south-1.amazonaws.com/cdn.pwskills.com/assets/uploads/categoryIcon/479347c6-ab68-4cf3-bc0a-b309a09781d1.svg" alt="Digital">
+                <p class="text-3xl font-bold text-white mt-2">Digital Skills</p>
+                <p class="text-lg font-medium text-gray-300 text-center">Product Management with AI.</p>
+            </div>
+        </div>
+    </div>
+        <!-- Product Page Ends -->
+
+    <!-- Footer Section Starts Here -->
+
+    <footer id="footer" class="w-full bg-gray-800 text-white px-4 pt-8 flex flex-col md:flex-row flex-wrap justify-between md:px-12 pb-10">
+        <div>
+            <img class="w-40 h-30" src="Otaku.png" alt="PW Skills Logo">
+            <p class="my-4">Email us: 
+                <a href="mailto:support@otakuskills.com" class="text-yellow-400 hover:underline">support@otakuskills.com</a>
+            </p>
+            <img class="w-48 h-24" src="https://b2518286.smushcdn.com/2518286/wp-content/uploads/2017/09/iso.png?lossy=0&strip=1&webp=1" alt="ISO Certification">
+        </div>
+        <div>
+            <h2 class="font-bold text-xl mt-4">Otaku Skills</h2>
+            <div class="w-32 h-1 border-b-2 border-yellow-400 rounded-2xl my-2"></div>
+            <div class="space-y-2">
+                <a href="#" class="block hover:text-yellow-400 hover:underline">About Us</a>
+                <a href="#" class="block hover:text-yellow-400 hover:underline">FAQs</a>
+                <a href="#" class="block hover:text-yellow-400 hover:underline">Privacy Policy</a>
+            </div>
+        </div>
+        <div>
+            <h2 class="font-bold text-xl mt-4">Company</h2>
+            <div class="w-32 h-1 border-b-2 border-yellow-400 rounded-2xl my-2"></div>
+            <div class="space-y-2">
+                <a href="#" class="block hover:text-yellow-400 hover:underline">Contact Us</a>
+                <a href="#" class="block hover:text-yellow-400 hover:underline">Career Services</a>
+                <a href="#" class="block hover:text-yellow-400 hover:underline">Terms & Conditions</a>
+            </div>
+        </div>
+        <div>
+            <h2 class="font-bold text-xl mt-4">Products</h2>
+            <div class="w-32 h-1 border-b-2 border-yellow-400 rounded-2xl my-2"></div>
+            <div class="space-y-2">
+                <a href="#" class="block hover:text-yellow-400 hover:underline">Experience Portal</a>
+                <a href="#" class="block hover:text-yellow-400 hover:underline">Hall of Fame</a>
+                <a href="#" class="block hover:text-yellow-400 hover:underline">Become an Affiliate</a>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="w-full bg-gray-900 text-center text-white py-4 mt-8">
+        <p>&copy; 2025 Otaku Skills. All rights reserved.</p>
+        <div class="flex justify-center space-x-4 mt-2">
+            <a href="#" class="text-yellow-400 hover:underline">Facebook</a>
+            <a href="#" class="text-yellow-400 hover:underline">Twitter</a>
+            <a href="#" class="text-yellow-400 hover:underline">LinkedIn</a>
+
+    
+
+     
+</body>
+</html>
